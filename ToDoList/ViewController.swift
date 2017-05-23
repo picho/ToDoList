@@ -61,11 +61,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.deleteTask(index: indexPath.row)
         }
         
-        let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share") { (action , indexPath) -> Void in
+        let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Edit") { (action , indexPath) -> Void in
 
-            let alert = UIAlertController.twoButtonAlert(alertTitle: "Shared!!!", alertMessage: "Your task was shared 😊",firstButtonName: "OK",secondButtonName: "Cancel",styleFirstButton: UIAlertActionStyle.default, styleSecondButton: UIAlertActionStyle.destructive)
+            /*let alert = UIAlertController.twoButtonAlert(alertTitle: "Shared!!!", alertMessage: "Your task was shared 😊",firstButtonName: "OK",secondButtonName: "Cancel",styleFirstButton: UIAlertActionStyle.default, styleSecondButton: UIAlertActionStyle.destructive)
             
-            self.present(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)*/
+            
+            
 
         }
         
@@ -105,7 +107,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "EditTaskSegue" {
+        if segue.identifier == "ViewTaskSegue" {
             if let destination = segue.destination as? DetailTaskViewController {
                 if let index = sender as? Int {
                     
