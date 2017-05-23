@@ -17,6 +17,7 @@
 		650E92D71EB6BB3500481978 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E92D61EB6BB3500481978 /* DetailTaskViewController.swift */; };
 		650E92DA1EB6E50400481978 /* GenericTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E92D91EB6E50400481978 /* GenericTask.swift */; };
 		65A5D0D31EB2CCA0001B8561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5D0D21EB2CCA0001B8561 /* Extensions.swift */; };
+		65ADFC281ED3C49F002865D1 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ADFC271ED3C49F002865D1 /* EditViewController.swift */; };
 		65E787EA1ECBE65000C76EEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E787E91ECBE65000C76EEB /* HomeViewController.swift */; };
 		65E787EC1ECBE84500C76EEB /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E787EB1ECBE84500C76EEB /* CalculatorViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		650E92D61EB6BB3500481978 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		650E92D91EB6E50400481978 /* GenericTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTask.swift; sourceTree = "<group>"; };
 		65A5D0D21EB2CCA0001B8561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		65ADFC271ED3C49F002865D1 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		65E787E91ECBE65000C76EEB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		65E787EB1ECBE84500C76EEB /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				650E92D61EB6BB3500481978 /* DetailTaskViewController.swift */,
 				65E787E91ECBE65000C76EEB /* HomeViewController.swift */,
 				65E787EB1ECBE84500C76EEB /* CalculatorViewController.swift */,
+				65ADFC271ED3C49F002865D1 /* EditViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65ADFC281ED3C49F002865D1 /* EditViewController.swift in Sources */,
 				65A5D0D31EB2CCA0001B8561 /* Extensions.swift in Sources */,
 				650E83D21EAD682000270D16 /* ViewController.swift in Sources */,
 				650E83E81EAD6A5300270D16 /* AddTaskViewController.swift in Sources */,

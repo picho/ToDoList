@@ -9,8 +9,6 @@
 import UIKit
 
 class DetailTaskViewController: UIViewController {
-
-    
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var isImportant: UILabel!

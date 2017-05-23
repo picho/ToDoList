@@ -69,12 +69,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FsP-cD-YqQ" id="oHr-Dn-2ac"/>
-                        <segue destination="tzU-bT-Nc3" kind="show" identifier="ViewTaskSegue" id="Zfq-ua-C7d"/>
+                        <segue destination="tzU-bT-Nc3" kind="show" identifier="DetailTaskSegue" id="Zfq-ua-C7d"/>
+                        <segue destination="bZm-tI-HXd" kind="show" identifier="EditTaskSegue" id="r2b-vQ-lSw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="-1074"/>
+            <point key="canvasLocation" x="1310" y="-1084"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="3RD-wR-Bu4">
@@ -341,6 +342,33 @@
             </objects>
             <point key="canvasLocation" x="1256.8" y="-216.34182908545728"/>
         </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="7wg-62-R8C">
+            <objects>
+                <viewController id="bZm-tI-HXd" customClass="EditViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TYO-K9-9lG"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Kf-0C-vRm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UIR-df-jED">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czv-yN-d8u">
+                                <rect key="frame" x="118" y="108" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmi-P1-IHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2527" y="-750"/>
+        </scene>
         <!--Add Task View Controller-->
         <scene sceneID="s6I-Ta-txu">
             <objects>
@@ -392,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxL-lm-GHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090" y="-1578"/>
+            <point key="canvasLocation" x="2796" y="-2235"/>
         </scene>
         <!--Detail Task View Controller-->
         <scene sceneID="wfl-eN-f6K">
@@ -470,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LvP-1T-jhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3007" y="-1023"/>
+            <point key="canvasLocation" x="3980" y="-1666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7lJ-cf-Mtm">

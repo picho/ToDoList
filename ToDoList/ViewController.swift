@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let index = tableView.indexPathForSelectedRow!.row
         
-        performSegue(withIdentifier: "EditTaskSegue", sender: index)
+        performSegue(withIdentifier: "DetailTaskSegue", sender: index)
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -63,12 +63,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Edit") { (action , indexPath) -> Void in
 
-            /*let alert = UIAlertController.twoButtonAlert(alertTitle: "Shared!!!", alertMessage: "Your task was shared 😊",firstButtonName: "OK",secondButtonName: "Cancel",styleFirstButton: UIAlertActionStyle.default, styleSecondButton: UIAlertActionStyle.destructive)
+            self.performSegue(withIdentifier: "EditTaskSegue", sender: self.index)
             
-            self.present(alert, animated: true, completion: nil)*/
-            
-            
-
         }
         
         deleteAction.backgroundColor = UIColor.red
@@ -107,10 +103,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ViewTaskSegue" {
+        if segue.identifier == "DetailTaskSegue" {
             if let destination = segue.destination as? DetailTaskViewController {
                 if let index = sender as? Int {
-                    
+                    destination.task = makeGenerticTask(task: taskArray[index])
+                }
+            }
+        }
+        else if segue.identifier == "EditTaskSegue" {
+            if let destination = segue.destination as? EditViewController {
+                if let index = sender as? Int {
                     destination.task = makeGenerticTask(task: taskArray[index])
                 }
             }
