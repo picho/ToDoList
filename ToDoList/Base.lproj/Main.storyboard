@@ -89,28 +89,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ2-UR-AUc">
-                                <rect key="frame" x="231" y="94" width="128" height="128"/>
-                                <state key="normal" image="Todo"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="G7x-dV-CvV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnq-O2-rOd">
-                                <rect key="frame" x="16" y="94" width="128" height="128"/>
-                                <state key="normal" image="Calculator"/>
-                                <connections>
-                                    <segue destination="n0N-Ih-JgR" kind="show" id="Iia-Aa-Dbx"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="saZ-Hu-m6H">
+                                <rect key="frame" x="16" y="94" width="343" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnq-O2-rOd">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="128"/>
+                                        <state key="normal" image="Calculator"/>
+                                        <connections>
+                                            <segue destination="n0N-Ih-JgR" kind="show" id="Iia-Aa-Dbx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ2-UR-AUc">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="128"/>
+                                        <state key="normal" image="Todo"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="G7x-dV-CvV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jnq-O2-rOd" firstAttribute="leading" secondItem="FLG-e1-0Z3" secondAttribute="leadingMargin" id="Cym-1a-ukc"/>
-                            <constraint firstItem="eQ2-UR-AUc" firstAttribute="leading" secondItem="jnq-O2-rOd" secondAttribute="trailing" constant="87" id="elX-fg-y1t"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eQ2-UR-AUc" secondAttribute="trailing" id="l6j-Rj-Zs3"/>
-                            <constraint firstItem="jnq-O2-rOd" firstAttribute="top" secondItem="u1t-io-RGu" secondAttribute="bottom" constant="30" id="wvX-QK-o5C"/>
-                            <constraint firstItem="eQ2-UR-AUc" firstAttribute="top" secondItem="u1t-io-RGu" secondAttribute="bottom" constant="30" id="z8N-4H-1My"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="saZ-Hu-m6H" secondAttribute="trailing" id="0bA-sw-1bw"/>
+                            <constraint firstItem="saZ-Hu-m6H" firstAttribute="leading" secondItem="FLG-e1-0Z3" secondAttribute="leadingMargin" id="Y0a-1W-vni"/>
+                            <constraint firstItem="saZ-Hu-m6H" firstAttribute="top" secondItem="u1t-io-RGu" secondAttribute="bottom" constant="30" id="zEz-nb-Fm3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N5O-wf-rOF"/>
