@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GenericTask {
+public class GenericTask {
     
     var name : String?
     var isImportant : Bool?
@@ -22,5 +22,9 @@ class GenericTask {
     
     convenience init() {
         self.init(name: "", isImportant: false, dateCreated: Date())
+    }
+    
+    class func makeGenerticTask(task: Task) -> GenericTask {
+        return GenericTask(name: task.name!, isImportant: task.isImportant, dateCreated: task.dateCreate! as Date)
     }
 }

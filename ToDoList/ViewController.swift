@@ -62,8 +62,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Edit") { (action , indexPath) -> Void in
-
-            self.performSegue(withIdentifier: "EditTaskSegue", sender: self.index)
+            print(self.index)
+            self.performSegue(withIdentifier: "EditTaskSegue", sender: indexPath.row)
             
         }
         
@@ -106,22 +106,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "DetailTaskSegue" {
             if let destination = segue.destination as? DetailTaskViewController {
                 if let index = sender as? Int {
-                    destination.task = makeGenerticTask(task: taskArray[index])
+                    destination.task = GenericTask.makeGenerticTask(task: taskArray[index])
                 }
             }
         }
         else if segue.identifier == "EditTaskSegue" {
             if let destination = segue.destination as? EditViewController {
                 if let index = sender as? Int {
-                    destination.task = makeGenerticTask(task: taskArray[index])
+                    destination.indexTask = index
                 }
             }
         }
     }
-    
-    func makeGenerticTask(task: Task) -> GenericTask {
-        return GenericTask(name: task.name!, isImportant: task.isImportant, dateCreated: task.dateCreate! as Date)
-    }
-    
 }
 

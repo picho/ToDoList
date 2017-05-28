@@ -38,7 +38,11 @@ extension UIAlertController{
         
         return alert
     }
-
+    
+    static func oneButtonAlertWithMethod(alertTitle: String, alertMessage: String) -> UIAlertController {
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        return alert
+    }
 }
 
 extension Date {
