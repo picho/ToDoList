@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650A96281EF2146A00B29A1C /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A96271EF2146A00B29A1C /* PaymentViewController.swift */; };
 		650E83D01EAD682000270D16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E83CF1EAD682000270D16 /* AppDelegate.swift */; };
 		650E83D21EAD682000270D16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E83D11EAD682000270D16 /* ViewController.swift */; };
 		650E83D51EAD682000270D16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650E83D31EAD682000270D16 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650A96271EF2146A00B29A1C /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		650E83CC1EAD682000270D16 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650E83CF1EAD682000270D16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		650E83D11EAD682000270D16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				65E787E91ECBE65000C76EEB /* HomeViewController.swift */,
 				65E787EB1ECBE84500C76EEB /* CalculatorViewController.swift */,
 				65ADFC271ED3C49F002865D1 /* EditViewController.swift */,
+				650A96271EF2146A00B29A1C /* PaymentViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				650E83E81EAD6A5300270D16 /* AddTaskViewController.swift in Sources */,
 				650E83D81EAD682000270D16 /* ToDoList.xcdatamodeld in Sources */,
 				65E787EA1ECBE65000C76EEB /* HomeViewController.swift in Sources */,
+				650A96281EF2146A00B29A1C /* PaymentViewController.swift in Sources */,
 				650E92D71EB6BB3500481978 /* DetailTaskViewController.swift in Sources */,
 				650E92DA1EB6E50400481978 /* GenericTask.swift in Sources */,
 				65E787EC1ECBE84500C76EEB /* CalculatorViewController.swift in Sources */,
