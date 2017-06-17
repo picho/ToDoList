@@ -23,6 +23,11 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var lblTotalAmount: UILabel!
     @IBOutlet weak var lblTotalPercentage: UILabel!
     @IBOutlet weak var lblTotalPercentageAmount: UILabel!
+    @IBOutlet weak var lblFinalTotal: UILabel!
+    @IBOutlet weak var lblFinalTotalAmount: UILabel!
+    @IBOutlet weak var lblTotalFinalPercentage: UILabel!
+    @IBOutlet weak var lblTotalFinalPercentageAmount: UILabel!
+    
     
     
     override func viewDidLoad() {
@@ -35,9 +40,15 @@ class PaymentViewController: UIViewController {
         lblTotalAmount.textColor = UIColor.white
         lblTotalPercentage.textColor = UIColor.white
         lblTotalPercentageAmount.textColor = UIColor.white
+        lblFinalTotal.textColor = UIColor.white
+        lblFinalTotalAmount.textColor = UIColor.white
+        lblTotalFinalPercentage.textColor = UIColor.white
+        lblTotalFinalPercentageAmount.textColor = UIColor.white
         
-        lblTotalAmount.text = ""
-        lblTotalPercentageAmount.text = ""
+        lblTotalAmount.text = "0"
+        lblTotalPercentageAmount.text = "0"
+        lblFinalTotalAmount.text = "0"
+        lblTotalFinalPercentageAmount.text = "0"
 
     }
 
@@ -49,16 +60,18 @@ class PaymentViewController: UIViewController {
         let percentageValue : Double = Double(percentage.text!)! / 100
         let percentageAmountValue : Double = Double(amount.text!)! * percentageValue
         let peopleValue : Double = Double(people.text! == "" ? "1" : people.text!)!
-        let totalValue : Double = ((amountValue + percentageAmountValue) / peopleValue)
+        let totalValue : Double = ((amountValue + percentageAmountValue))
+        let totalPerPerson : Double = totalValue / peopleValue
         
         print(amountValue)
         print(percentageValue)
         print(peopleValue)
         print(totalValue)
         
-        lblTotalAmount.text = String(totalValue)
-        
-        lblTotalPercentageAmount.text = String(percentageValue / peopleValue)
+        lblFinalTotalAmount.text = String(totalValue)
+        lblTotalAmount.text = String(totalPerPerson)
+        lblTotalPercentageAmount.text = String(percentageAmountValue / peopleValue)
+        lblTotalFinalPercentageAmount.text = String(percentageAmountValue)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
